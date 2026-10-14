@@ -1,6 +1,8 @@
 # 캠퍼스레이더
 
-충남대학교 사이버캠퍼스 과제·콘텐츠 알림 Android 프로토타입입니다.
+충남대학교 사이버캠퍼스 과제·콘텐츠 알림 프로토타입입니다. Android APK를 배포하며 iPhone용 AltStore 테스트 배포를 준비했습니다.
+
+iPhone 빌드·설치·검증 절차는 [IOS-DISTRIBUTION.md](IOS-DISTRIBUTION.md)를 확인하세요. iOS 백그라운드 수집은 고정된 주기를 보장하지 않습니다.
 
 ## 설치
 
