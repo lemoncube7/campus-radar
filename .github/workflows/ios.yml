@@ -1,0 +1,48 @@
+name: iOS AltStore preview
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - campus-radar-source.zip
+      - .github/workflows/ios.yml
+permissions:
+  contents: write
+concurrency:
+  group: ios-preview
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract source
+        run: unzip -q campus-radar-source.zip -d app
+      - name: Install Flutter 3.35.7
+        run: |
+          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+      - name: Build unsigned IPA
+        working-directory: app
+        run: bash scripts/build-ios.sh
+      - name: Create AltStore metadata
+        working-directory: app
+        run: |
+          python3 scripts/make-altstore-source.py build/ios/altstore/campus-radar.ipa build/ios/altstore/altstore-source.json https://github.com/${{ github.repository }}/releases/download/ios-preview
+          cp ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png build/ios/altstore/icon.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: campus-radar-ios
+          path: |
+            app/build/ios/altstore/*.ipa
+            app/build/ios/altstore/*.json
+            app/build/ios/altstore/*.sha256
+            app/build/ios/altstore/icon.png
+      - name: Publish iOS preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view ios-preview >/dev/null 2>&1; then
+            gh release create ios-preview --target "$GITHUB_SHA" --prerelease --latest=false --title 'iPhone AltStore 테스트 배포' --notes 'iOS 초기 프로토타입입니다. AltStore Classic에서 IPA를 재서명해 설치하세요. 실제 iPhone 검증 전이며 iOS 백그라운드 확인 시각은 보장되지 않습니다.'
+          fi
+          gh release upload ios-preview app/build/ios/altstore/campus-radar.ipa app/build/ios/altstore/campus-radar.ipa.sha256 app/build/ios/altstore/altstore-source.json app/build/ios/altstore/ios-latest.json app/build/ios/altstore/icon.png --clobber
