@@ -1,5 +1,12 @@
 # iPhone 배포 준비
 
+## 현재 확인한 상태
+
+- 초기 0.1.3 (빌드 4) IPA는 GitHub macOS 빌드에서 컴파일·패키징을 완료했고, 로컬로 내려받아 번들 ID·버전·최소 iOS 14.0·SHA-256을 확인했습니다.
+- GitHub Release 게시는 HTTP 500으로 실패했습니다. 이어진 게시 준비 중 브라우저의 자동 승인 검토가 사용량 한도로 실행되지 않았습니다.
+- GitHub 연결 도구는 lemoncube7 계정을 확인했지만 접근 가능한 저장소·앱 설치 목록이 비어 있으며, 파일 쓰기는 403으로 거절됐습니다.
+- 최신 0.1.4의 로그·공지·마감 색상과 AltStore 업데이트 연결은 소스에 반영했습니다. 이 변경은 초기 IPA에 들어 있지 않으며, macOS 재빌드와 실제 iPhone 검증이 남아 있습니다.
+
 ## 배포 방식
 
 - Flutter iOS Release 빌드를 macOS GitHub Actions에서 만들고, 서명 없는 IPA를 생성합니다.
@@ -11,14 +18,14 @@
 
 빌드 성공 후 `ios-preview` 테스트 Release에서 `campus-radar.ipa`를 제공합니다.
 Safari에서 IPA 다운로드 → 파일 앱에 저장 → AltStore Classic의 My Apps에서 + → IPA 선택 → 서명·설치 순서입니다.
-이미 사용하는 Remote AltServer 연결을 AltStore에서 선택합니다. 연결이나 서명 갱신은 AltStore에서 처리합니다.
+AltStore 설정의 Set up Remote AltServer로 기기 페어링과 LocalDevVPN 설정을 진행합니다. 사용 시 Wi-Fi와 LocalDevVPN 연결이 필요합니다. 이미 설정했다면 기존 연결을 사용합니다. 서명 갱신은 AltStore에서 처리합니다.
 
 AltStore Source 주소는 다음과 같습니다. **Release 생성 전에는 유효한 설치 주소가 아닙니다.**
 
 `https://github.com/lemoncube7/campus-radar/releases/download/ios-preview/altstore-source.json`
 
 AltStore의 Sources에 이 주소를 등록하면 캠퍼스레이더를 찾아 설치하고 새 버전도 확인할 수 있습니다.
-앱의 iPhone 업데이트 화면에서는 GitHub 배포 페이지로 연결합니다. 실제 업데이트 설치는 AltStore에서 진행합니다.
+앱의 iPhone 업데이트 화면에서는 업데이트 확인으로 `ios-latest.json`의 버전 정보를 읽습니다. 새 버전에서 업데이트를 누르면 AltStore Classic의 소스 화면을 엽니다. 실제 서명·설치는 AltStore에서 확인합니다.
 
 ## iOS 동작
 
@@ -56,3 +63,4 @@ AltStore 메타데이터는 실제 IPA의 Info.plist, 파일 크기, SHA-256을 
 7. 다음 IPA에서 AltStore 업데이트 후 계정·목록 유지 여부를 확인합니다.
 
 참고: [AltStore Source 형식](https://faq.altstore.io/developers/make-a-source), [Remote AltServers](https://faq.altstore.io/altstore-classic/remote-altservers), [Flutter iOS 배포](https://docs.flutter.dev/deployment/ios).
+

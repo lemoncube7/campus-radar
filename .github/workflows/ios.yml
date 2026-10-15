@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - campus-radar-source.zip
-      - .github/workflows/ios.yml
 permissions:
   contents: write
 concurrency:
@@ -43,6 +42,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view ios-preview >/dev/null 2>&1; then
-            gh release create ios-preview --target "$GITHUB_SHA" --prerelease --latest=false --title 'iPhone AltStore 테스트 배포' --notes 'iOS 초기 프로토타입입니다. AltStore Classic에서 IPA를 재서명해 설치하세요. 실제 iPhone 검증 전이며 iOS 백그라운드 확인 시각은 보장되지 않습니다.'
+            for attempt in 1 2 3; do
+              if gh release create ios-preview --target "$GITHUB_SHA" --prerelease --latest=false --title 'iPhone AltStore 테스트 배포' --notes 'iOS 초기 프로토타입입니다. AltStore Classic에서 IPA를 재서명해 설치하세요. 실제 iPhone 검증 전이며 iOS 백그라운드 확인 시각은 보장되지 않습니다.'; then break; fi
+              if gh release view ios-preview >/dev/null 2>&1; then break; fi
+              sleep 10
+            done
           fi
+          gh release view ios-preview >/dev/null
           gh release upload ios-preview app/build/ios/altstore/campus-radar.ipa app/build/ios/altstore/campus-radar.ipa.sha256 app/build/ios/altstore/altstore-source.json app/build/ios/altstore/ios-latest.json app/build/ios/altstore/icon.png --clobber
+          gh release edit ios-preview --draft=false --prerelease --latest=false
+
