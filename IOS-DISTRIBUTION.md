@@ -2,11 +2,12 @@
 
 ## 현재 확인한 상태
 
-- 최신 0.1.4 (빌드 5) IPA는 GitHub macOS 빌드에서 정적 분석·테스트·컴파일·패키징을 통과했고, ios-preview 테스트 Release에 게시했습니다.
+- 최신 0.1.5 (빌드 6) IPA는 GitHub macOS 빌드에서 정적 분석·테스트·컴파일·패키징을 통과했고, ios-preview 테스트 Release에 게시했습니다.
 - 게시된 IPA를 내려받아 번들 ID·버전·최소 iOS 14.0·SHA-256과 AltStore 메타데이터의 파일 크기를 확인했습니다.
 - GitHub 연결 권한을 다시 설정한 뒤 소스 쓰기와 IPA 자동 게시가 정상 동작했습니다.
-- 로그·공지·마감 색상과 AltStore 업데이트 연결이 최신 IPA에 들어 있습니다. 실제 iPhone 설치·알림·백그라운드 검증은 남아 있습니다.
-- [빌드 성공 기록](https://github.com/lemoncube7/campus-radar/actions/runs/38660989193), [iPhone 테스트 Release](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview).
+- 로그·공지·마감 색상과 AltStore 업데이트 연결, 전체 할 일 API 시간 초과를 피하는 강의별 수집 수정이 최신 IPA에 들어 있습니다. 실제 iPhone 설치·알림·백그라운드 검증은 남아 있습니다.
+- 0.1.5 IPA는 7,606,975바이트이며 SHA-256은 `3594031bfc36004609e95d83a67ffe57df0c55f988086700aba6717163ae5a6d`입니다. 공개 파일을 다시 다운로드해 버전·번들 ID·파일 크기·AltStore 소스 메타데이터와 대조했습니다.
+- [빌드 성공 기록](https://github.com/lemoncube7/campus-radar/actions/runs/38668376157), [iPhone 테스트 Release](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview).
 
 ## 배포 방식
 
@@ -16,6 +17,16 @@
 - 최소 iOS 14.0, 앱 식별자 `kr.campusradar.campusradar`입니다.
 
 ## 설치
+
+### 먼저 준비할 것
+
+- AltStore Classic 2.3을 사용하는 이번 배포 방식은 iOS 17.4 이상이 필요합니다. IPA 자체의 최소 iOS 설정 14.0과 설치 도구의 요구 버전은 서로 다릅니다. [AltStore 공식 릴리스 노트](https://github.com/altstoreio/FAQ/blob/main/release-notes/altstore.md)를 확인하세요.
+- iPhone, 데이터 통신이 되는 USB 케이블, Windows PC, Apple 계정, Wi-Fi를 준비합니다. Apple 계정은 AltStore/AltServer의 인증 화면에 직접 입력합니다.
+- AltStore가 아직 없다면 [Windows 공식 설치 안내](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows)에 따라 Apple 직접 배포판 iTunes·iCloud와 AltServer를 설치하고, iPhone USB 연결·컴퓨터 신뢰·Wi-Fi 동기화를 설정한 다음 AltServer에서 Install AltStore를 선택합니다.
+- iPhone의 설정 → 일반 → VPN 및 기기 관리에서 개발자 앱을 신뢰하고, 설정 → 개인정보 보호 및 보안 → 개발자 모드를 켭니다. 표시되는 재시작·확인 절차를 완료합니다.
+- AltStore가 이미 설치돼 있다면 위 초기 설치 단계를 반복할 필요 없이 아래 Remote AltServer 및 소스 등록으로 진행합니다.
+
+### Remote AltServer와 앱 설치
 
 [`ios-preview` 테스트 Release](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview)에서 `campus-radar.ipa`를 내려받습니다.
 Safari에서 IPA 다운로드 → 파일 앱에 저장 → AltStore Classic의 My Apps에서 + → IPA 선택 → 서명·설치 순서입니다.
@@ -27,6 +38,15 @@ AltStore Source 주소는 다음과 같습니다. 게시된 최신 테스트 IPA
 
 AltStore의 Sources에 이 주소를 등록하면 캠퍼스레이더를 찾아 설치하고 새 버전도 확인할 수 있습니다.
 앱의 iPhone 업데이트 화면에서는 업데이트 확인으로 `ios-latest.json`의 버전 정보를 읽습니다. 새 버전에서 업데이트를 누르면 AltStore Classic의 소스 화면을 엽니다. 실제 서명·설치는 AltStore에서 확인합니다.
+
+일반 무료 Apple 계정으로 설치한 앱은 7일 안에 서명을 갱신해야 합니다. AltStore의 My Apps → Refresh All로 만료 전에 갱신하고, Remote AltServer를 사용할 때는 Wi-Fi와 LocalDevVPN을 연결합니다. 무료 계정의 동시 활성 앱 제한도 확인하세요. [AltStore 시작 안내](https://faq.altstore.io/altstore-classic/your-altstore).
+
+### 캠퍼스레이더 첫 실행
+
+1. 포털 계정을 연결하고 과제·콘텐츠·공지 목록이 수집되는지 확인합니다.
+2. 알림 권한을 허용하고 앱의 알림 테스트로 실제 표시를 확인합니다.
+3. 설정 → 일반 → 백그라운드 앱 새로 고침을 켜고 캠퍼스레이더를 허용합니다.
+4. 자동 수집을 확인하는 동안 저전력 모드는 끄고, 앱 전환 화면에서 앱을 위로 밀어 강제 종료하지 않습니다. 고정된 1시간 실행을 보장하는 설정은 아닙니다.
 
 ## iOS 동작
 
