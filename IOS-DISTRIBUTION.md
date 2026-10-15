@@ -1,6 +1,10 @@
 # iPhone 배포 준비
 
-## 현재 확인한 상태
+## 0.2.1 업데이트
+
+화면 개편·공지 AI 일정함·선택형 AI 요약·EventKit 캘린더 전송을 포함합니다. 자세한 범위와 iOS 차이는 [IOS-RELEASE-NOTES.md](IOS-RELEASE-NOTES.md)를 확인하세요. AltStore 소스 주소와 번들 ID는 유지합니다. 실제 iPhone 검증은 별도로 필요합니다.
+
+## 이전 0.1.5 확인 기록
 
 - 최신 0.1.5 (빌드 6) IPA는 GitHub macOS 빌드에서 정적 분석·테스트·컴파일·패키징을 통과했고, ios-preview 테스트 Release에 게시했습니다.
 - 게시된 IPA를 내려받아 번들 ID·버전·최소 iOS 14.0·SHA-256과 AltStore 메타데이터의 파일 크기를 확인했습니다.
@@ -51,7 +55,7 @@ AltStore의 Sources에 이 주소를 등록하면 캠퍼스레이더를 찾아 �
 ## iOS 동작
 
 - 계정은 iOS Keychain에 저장합니다. 재부팅 후 처음 잠금을 해제한 다음 백그라운드 접근을 허용하고, 다른 기기로 이전하지 않는 설정입니다.
-- 알림 권한을 요청하고 로컬 알림을 예약합니다. iOS 예약 한도에 맞춰 마감이 가까운 항목부터 최대 60개를 예약합니다.
+- 알림 권한을 요청하고 로컬 알림을 예약합니다. iOS 예약 한도에 맞춰 마감이 가까운 항목부터 데일리 요약 7회 공간을 남겨 최대 56개를 예약합니다.
 - 새 과제는 수집에 성공해 발견한 시점에 알립니다. 실시간 서버 푸시가 아닙니다.
 - iOS 백그라운드 확인은 BGAppRefreshTask를 사용합니다. 1시간을 요청하지만 실행 여부와 시각은 iOS가 결정합니다.
 - 앱 실행·복귀 시에도 수집합니다. 사용자가 강제 종료하거나 백그라운드 앱 새로 고침을 끄면 자동 수집이 제한됩니다.
@@ -84,4 +88,3 @@ AltStore 메타데이터는 실제 IPA의 Info.plist, 파일 크기, SHA-256을 
 7. 다음 IPA에서 AltStore 업데이트 후 계정·목록 유지 여부를 확인합니다.
 
 참고: [AltStore Source 형식](https://faq.altstore.io/developers/make-a-source), [Remote AltServers](https://faq.altstore.io/altstore-classic/remote-altservers), [Flutter iOS 배포](https://docs.flutter.dev/deployment/ios).
-
