@@ -1,0 +1,8 @@
+{
+  "versionName": "0.3.1",
+  "versionCode": 16,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.3.1/campus-radar.apk",
+  "sha256": "41b97c23aaeb04c55119fee3fdc9d4090603c75a0e742fac078ee1bf5649d8e2",
+  "notes": "개발 버전: 자동 업데이트 확인·채널 선택·AI 일정 바로 확정. 0.3.0 기능 포함.",
+  "channel": "development"
+}
