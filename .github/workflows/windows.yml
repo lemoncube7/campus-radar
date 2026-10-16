@@ -1,0 +1,55 @@
+name: Windows independent desktop
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - campus-radar-windows-source.zip
+permissions:
+  contents: write
+concurrency:
+  group: windows-desktop
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract Windows source
+        run: Expand-Archive -LiteralPath campus-radar-windows-source.zip -DestinationPath app
+      - uses: NuGet/setup-nuget@v2
+      - name: Install Flutter 3.35.7
+        run: |
+          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$env:RUNNER_TEMP/flutter"
+          "$env:RUNNER_TEMP/flutter/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: Resolve dependencies and test
+        working-directory: app
+        run: |
+          flutter pub get
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          flutter analyze --no-pub
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          flutter test --no-pub
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Build and package
+        working-directory: app
+        run: |
+          flutter build windows --release --no-pub
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/build-windows-package.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: campus-radar-windows
+          path: app/build/windows/dist/*
+      - name: Publish Windows preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $m=Get-Content app/build/windows/dist/windows.json -Raw | ConvertFrom-Json
+          $tag='windows-v'+$m.versionName
+          gh release view $tag
+          if ($LASTEXITCODE -ne 0) { gh release create $tag --target "$env:GITHUB_SHA" --prerelease --latest=false --title "Windows $($m.versionName) · 독립 실행" --notes-file app/WINDOWS-README.md }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          gh release upload $tag app/build/windows/dist/campus-radar-windows.zip app/build/windows/dist/windows.json --clobber
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
