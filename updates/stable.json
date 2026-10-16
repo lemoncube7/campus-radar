@@ -1,8 +1,9 @@
 {
-  "versionName": "0.2.2",
-  "versionCode": 13,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.2.2/campus-radar.apk",
-  "sha256": "c5767940c44a0075bff5d4368543f65c347ae28d78aa04f72ededfb173099961",
-  "notes": "AI 설정의 키 발급·무료 등급 확인과 사용량 한도 확인을 누르면 브라우저로 열 수 있습니다.",
-  "channel": "stable"
+  "versionName": "0.3.2",
+  "versionCode": 17,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.3.2/campus-radar.apk",
+  "sha256": "ae98a1e442cb61ab0b814c4b191bbda78e1f7a7e4abb212fc792a4f56c617edf",
+  "channel": "stable",
+  "notes": "정식 릴리스: 과목 약자 확대·AI 채팅 마크다운·접근성 잠금화면·실제 강의계획서 저장."
 }
+
