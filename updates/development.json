@@ -1,8 +1,8 @@
 {
-  "versionName": "0.3.1",
-  "versionCode": 16,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.3.1/campus-radar.apk",
-  "sha256": "41b97c23aaeb04c55119fee3fdc9d4090603c75a0e742fac078ee1bf5649d8e2",
-  "notes": "개발 버전: 자동 업데이트 확인·채널 선택·AI 일정 바로 확정. 0.3.0 기능 포함.",
-  "channel": "development"
+  "versionName": "0.4.1",
+  "versionCode": 19,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.1-dev.1/campus-radar.apk",
+  "sha256": "680b3dfc5b5820f721bb8b739b8057f0b4307678a7c07c4b8590bfe1fd694aa4",
+  "channel": "development",
+  "notes": "Android 개발: 제출 완료 과제 필터, 강의계획서 시간표, 수업 전 15·30·60분 알림, 자정 수업·과제 요약. 시간표는 확인 후 저장하고 정확한 알림 권한을 확인하세요."
 }
