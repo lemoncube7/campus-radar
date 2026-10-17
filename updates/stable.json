@@ -1,9 +1,8 @@
 {
-  "versionName": "0.4.0",
-  "versionCode": 18,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.0/campus-radar.apk",
-  "sha256": "d555b9db1e558f31ab7e8c630bf050b1d2de4584fbc1af6bcb8dc1c21ec03621",
+  "versionName": "0.4.6",
+  "versionCode": 25,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.6/campus-radar.apk",
+  "sha256": "9445b3df8ab5ef3d59281bad4731b3bd0e932a9a13c596921d19441d57d9442b",
   "channel": "stable",
-  "notes": "0.4.0 조용한 레이더: 라이트·다크 테마, 오늘 화면 개편, 작은 잠금화면 카드 간소화·투명도."
+  "notes": "AI 분석 실패 해결: 구체적인 오류 설명과 실제 오류 기록, 실패 항목 우선 표시, 원문 확인·직접 일정 추가·분석 제외, 같은 과목 공지/과제/실제 강의계획서를 선택·미리보기 후 재분석, 이전 실패 이유를 함께 보내는 재시도."
 }
-
