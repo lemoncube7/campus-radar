@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.2",
-  "versionCode": 20,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.2-dev.1/campus-radar.apk",
-  "sha256": "100528c5b18934016befb40e451f836c41ddcd5c464f057b916c97d3c90c1060",
+  "versionName": "0.4.3",
+  "versionCode": 21,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.3-dev.1/campus-radar.apk",
+  "sha256": "12a01fdc912f708768bff717d1f787807f6e88923ee0d815de3ddf2acbe248f1",
   "channel": "development",
-  "notes": "Android 개발: 시간표 만들기로 전체 강의계획서 순차 수집·자동 저장, 주간 시간표 화면, 홈 화면 시간표 위젯. 과목 약자·강의실·겹치는 수업 표시. 시간 미확인/실패 과목 안내, 실패 과목 기존 시간 유지."
+  "notes": "Android 수정: 설치된 버전과 앱 표시 버전이 다르던 오류 해결. 설정·업데이트 화면에 실제 설치 버전과 빌드 번호 표시. 자동 업데이트 비교도 실제 설치 정보 사용. 기존 시간표·알림 등 기능 유지."
 }
