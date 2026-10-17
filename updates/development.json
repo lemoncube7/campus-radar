@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.3",
-  "versionCode": 21,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.3-dev.1/campus-radar.apk",
-  "sha256": "12a01fdc912f708768bff717d1f787807f6e88923ee0d815de3ddf2acbe248f1",
+  "versionName": "0.4.4",
+  "versionCode": 22,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.4-dev.1/campus-radar.apk",
+  "sha256": "2759ebf03f38b5314f29bc4fd736d74e4205d48e16e357a976ff3c752f653afc",
   "channel": "development",
-  "notes": "Android 수정: 설치된 버전과 앱 표시 버전이 다르던 오류 해결. 설정·업데이트 화면에 실제 설치 버전과 빌드 번호 표시. 자동 업데이트 비교도 실제 설치 정보 사용. 기존 시간표·알림 등 기능 유지."
+  "notes": "Android UI 개편: 할 일 필터 시트·진행/제출완료/숨김 보기, 오늘 수업과 마감 우선 배치, 시간표 조회·편집·알림 분리, 설정 그룹화, 과목별 미완료·가까운 마감, 상세·일정 저장 버튼 고정, AI 일정함/질문 탭, 잠금화면·테마 미리보기, 위젯 크기별 표시량 조정."
 }
