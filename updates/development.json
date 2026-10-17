@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.5",
-  "versionCode": 23,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.5-dev.1/campus-radar.apk",
-  "sha256": "6eca5bf481a1132c84ce3c4705d347a2ed03083872d78b66bfa217985b1cc697",
+  "versionName": "0.4.6",
+  "versionCode": 24,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.6-dev.1/campus-radar.apk",
+  "sha256": "1de927129382569a3238fe6a0ff5447fef2b0fc5665c37005506cd7502e9b4cb",
   "channel": "development",
-  "notes": "AI 도우미 홈 개편: 확인할 일정·빠른 질문·최근 대화, 과제·공지 공유 선택 유지, 분석 완료/실패 기록 분리, 일정 추가 위치 기억, 공지 본문 변경 확인과 분석 캐시 재사용, 키 오류 안내."
+  "notes": "AI 분석 실패 해결: 구체적인 오류 설명과 실제 오류 기록, 실패 항목 우선 표시, 원문 확인·직접 일정 추가·분석 제외, 같은 과목 공지/과제/실제 강의계획서를 선택·미리보기 후 재분석, 이전 실패 이유를 함께 보내는 재시도."
 }
