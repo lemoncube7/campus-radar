@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.6",
-  "versionCode": 25,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.6/campus-radar.apk",
-  "sha256": "9445b3df8ab5ef3d59281bad4731b3bd0e932a9a13c596921d19441d57d9442b",
+  "versionName": "0.4.8",
+  "versionCode": 28,
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.8/campus-radar.apk",
+  "sha256": "725084bef9b02f49f0b1ca7a56ae0da72d4c106ea9eed8fcfdb938e35981b829",
   "channel": "stable",
-  "notes": "AI 분석 실패 해결: 구체적인 오류 설명과 실제 오류 기록, 실패 항목 우선 표시, 원문 확인·직접 일정 추가·분석 제외, 같은 과목 공지/과제/실제 강의계획서를 선택·미리보기 후 재분석, 이전 실패 이유를 함께 보내는 재시도."
+  "notes": "AI 공지 분석·채팅에서 저장 시간표 참고 및 다음 수업 추정. 시간표 추정 근거·선택/필수 조건·기간 표시. 원문 문단 기반 검증과 1회 자동 수정·로컬 진단 기록. AI 23:59 마감 캘린더 표시 및 기존 연결 일정 보정."
 }
