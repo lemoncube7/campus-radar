@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.8",
-  "versionCode": 28,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.8/campus-radar.apk",
-  "sha256": "725084bef9b02f49f0b1ca7a56ae0da72d4c106ea9eed8fcfdb938e35981b829",
+  "versionName": "0.4.9",
+  "versionCode": 30,
   "channel": "stable",
-  "notes": "AI 공지 분석·채팅에서 저장 시간표 참고 및 다음 수업 추정. 시간표 추정 근거·선택/필수 조건·기간 표시. 원문 문단 기반 검증과 1회 자동 수정·로컬 진단 기록. AI 23:59 마감 캘린더 표시 및 기존 연결 일정 보정."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.9/campus-radar.apk",
+  "sha256": "415beb4b811c2c9e4cecd6709ff5a1bdf6b4e50691a856cd6947e48b9ca616a7",
+  "notes": "로그인 확인 후 계정 저장, 실패 시 입력창 오류 표시·재시도 및 기존 계정 유지. 공지·과제 본문 이미지와 첨부파일 수집·기기 저장·확대·문서 뷰어 열기."
 }
