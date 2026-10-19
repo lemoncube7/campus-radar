@@ -1,14 +1,14 @@
 # 캠퍼스레이더
 
-## Android 0.4.10 정식 · 빌드 31
+## Android 0.4.11 정식 · 빌드 32
 
-[APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.4.10/campus-radar.apk) · [변경 사항](https://github.com/lemoncube7/campus-radar/releases/tag/v0.4.10) · [전체 릴리스](https://github.com/lemoncube7/campus-radar/releases)
+[APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.4.11/campus-radar.apk) · [변경 사항](https://github.com/lemoncube7/campus-radar/releases/tag/v0.4.11) · [전체 릴리스](https://github.com/lemoncube7/campus-radar/releases)
 
 충남대학교 사이버캠퍼스의 과제·콘텐츠·공지를 모아 확인하고 미제출·미완료 항목의 마감을 알려주는 앱입니다.
 
 ### 이번 업데이트
 
-- 홈 AI 요약 카드 표시 오류 수정.
+- AI 데일리 요약을 펼칠 때 본문이 회색 영역으로 표시되던 오류 수정. 본문 선택·복사 유지.
 - 강의계획서 오류 안내·진단 로그·제한 재시도 추가.
 - 설정에서 과제·시간표 위젯과 잠금화면 카드의 글씨 크기를 각각 80~150% 조절.
 - 과제 수집이 실패해도 수강 과목 목록을 먼저 저장하고 과목 화면에서 학교 목록을 직접 새로고침.
@@ -23,7 +23,7 @@ APK를 내려받아 설치하거나 기존 앱의 정식 업데이트 확인을 
 
 ### 소스와 검증
 
-Android 소스는 저장소와 릴리스의 campus-radar-android-source.zip으로 제공합니다. 자동 테스트 179개를 통과했습니다.
+Android 소스는 저장소와 릴리스의 campus-radar-android-source.zip으로 제공합니다. 자동 테스트 180개를 통과했습니다.
 
 이미지·첨부파일은 파일당 50MB, 계정별 임시 캐시 300MB 제한입니다. 외부 서버 자료와 댓글은 원문에서 확인합니다. 이미지·첨부파일은 AI에 전송하지 않습니다.
 

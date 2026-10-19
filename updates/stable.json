@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.10",
-  "versionCode": 31,
+  "versionName": "0.4.11",
+  "versionCode": 32,
   "channel": "stable",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.10/campus-radar.apk",
-  "sha256": "a3cf537177f50b17525e10588813eea3c3add28ea154f400ca4948bf4d8042be",
-  "notes": "홈 회색 영역 수정, 강의계획서 오류 진단·재시도, 위젯 글씨 크기 조절, 과목 목록 직접 새로고침, 네트워크 오류 대응 강화."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.11/campus-radar.apk",
+  "sha256": "6b83c79b04b024b9aac7685dfb60550acda7e5333b2f6d001e984bda40828e81",
+  "notes": "AI 데일리 요약을 펼칠 때 본문이 회색으로 표시되던 스크롤 상태 충돌 수정. 본문 선택·복사 유지."
 }
