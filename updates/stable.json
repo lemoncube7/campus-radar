@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.11",
-  "versionCode": 32,
+  "versionName": "0.4.12",
+  "versionCode": 33,
   "channel": "stable",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.11/campus-radar.apk",
-  "sha256": "6b83c79b04b024b9aac7685dfb60550acda7e5333b2f6d001e984bda40828e81",
-  "notes": "AI 데일리 요약을 펼칠 때 본문이 회색으로 표시되던 스크롤 상태 충돌 수정. 본문 선택·복사 유지."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.12/campus-radar.apk",
+  "sha256": "3198680cd5336debc775bfa45fff3776d498f1eef3eb7675fb5ad6fa3c76c3c2",
+  "notes": "계정·동의 변경 및 로그아웃 보호, 공지 최신 본문 확인, 과목 목록·수집 잠금·통신 제한·첨부 캐시 보완, 새 공지 알림 및 AI 수동 재시도 정책 반영."
 }
