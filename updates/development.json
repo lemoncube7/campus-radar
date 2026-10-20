@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.6",
-  "versionCode": 24,
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.6-dev.1/campus-radar.apk",
-  "sha256": "1de927129382569a3238fe6a0ff5447fef2b0fc5665c37005506cd7502e9b4cb",
+  "versionName": "0.4.13",
+  "versionCode": 34,
   "channel": "development",
-  "notes": "AI 분석 실패 해결: 구체적인 오류 설명과 실제 오류 기록, 실패 항목 우선 표시, 원문 확인·직접 일정 추가·분석 제외, 같은 과목 공지/과제/실제 강의계획서를 선택·미리보기 후 재분석, 이전 실패 이유를 함께 보내는 재시도."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.13-dev/campus-radar.apk",
+  "sha256": "3cf2808e672b7b3e62ff4f62d505b3bc790680f3283e8cedac1786cd1c0872ad",
+  "notes": "수업 알림 발송 후 잠금화면 카드에 수업 시작까지 카운트다운 표시. 시작 시 기존 과제 표시로 복귀하며 전체·작은 카드 모두 지원."
 }
