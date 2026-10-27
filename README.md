@@ -49,11 +49,11 @@
 | Android 정식 | **0.4.14** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.4.14/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.4.14) |
 | Android 개발 | **0.5.2** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.2-dev/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.2-dev) |
 | Windows x64 미리보기 | **0.5.0** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.5.0/campus-radar-windows.zip) |
-| iPhone | 별도 테스트 배포 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
+| iPhone 개발 | **0.5.2** · 실기기 검증 전 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
 **정식 버전**은 일반 사용을 위한 배포이고, **개발 버전**에는 먼저 확인할 새 기능과 화면 변경이 들어갑니다. 개발 버전은 사용 중 문제가 생길 수 있습니다. 아래 화면 경로는 **0.5.0 기준**이며, 정식 0.4.14에서는 메뉴 배치가 일부 다릅니다.
 
-iPhone은 Android와 별도로 업데이트합니다. 이 README의 Android 위젯·잠금화면 기능이나 최신 화면 구성이 iPhone에도 모두 적용되어 있다는 의미는 아닙니다.
+iPhone은 Android와 별도로 업데이트합니다. 0.5.2는 최신 공통 화면·시간표·AI 기능을 반영한 개발 배포입니다. 홈·잠금화면 위젯은 iOS 16 이상의 WidgetKit 방식이며, Android의 자유 위치 잠금화면 카드와 표시 방식이 다릅니다. 설치·실제 알림·위젯·원격 서명 갱신은 [테스트 체크리스트](TEST-CHECKLIST-0.5.2.md)로 확인해야 합니다.
 
 ### Android
 
@@ -191,7 +191,7 @@ AI가 만든 일정이나 시간표를 참고한 추정은 틀릴 수 있습니�
 
 현재 저장소는 배포 파일·버전 정보·워크플로와 **소스 ZIP**을 중심으로 관리합니다. 저장소 루트에서 바로 Flutter 명령을 실행하는 구조는 아닙니다.
 
-- Android: 해당 [릴리스](https://github.com/lemoncube7/campus-radar/releases)의 `campus-radar-android-source.zip`
+- Android: 해당 [릴리스](https://github.com/lemoncube7/campus-radar/releases)의 소스 ZIP (0.5.2는 `campus-radar-source.zip`)
 - Windows: 저장소의 [campus-radar-windows-source.zip](campus-radar-windows-source.zip)
 - iPhone: [배포·빌드 안내](IOS-DISTRIBUTION.md)
 

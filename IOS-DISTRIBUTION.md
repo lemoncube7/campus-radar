@@ -1,3 +1,11 @@
+# 현재 iPhone 배포: 0.5.2 (38) 개발 버전
+
+AltStore 소스의 실제 버전·빌드를 확인하세요. 기존 앱을 삭제하지 않고 같은 Apple 계정으로 업데이트합니다. 위젯을 사용하려면 확장을 유지하세요. App Group·위젯·원격 업데이트·서명 갱신은 실제 기기 체크리스트로 확인해야 합니다.
+
+검증 항목: [TEST-CHECKLIST-0.5.2.md](TEST-CHECKLIST-0.5.2.md)
+
+아래는 이전 설치 안내와 검증 이력입니다. 과거 버전 결과를 현재 기기 검증으로 보지 마세요.
+
 # iPhone 배포 준비
 
 ## 0.2.1 업데이트
@@ -88,3 +96,4 @@ AltStore 메타데이터는 실제 IPA의 Info.plist, 파일 크기, SHA-256을 
 7. 다음 IPA에서 AltStore 업데이트 후 계정·목록 유지 여부를 확인합니다.
 
 참고: [AltStore Source 형식](https://faq.altstore.io/developers/make-a-source), [Remote AltServers](https://faq.altstore.io/altstore-classic/remote-altservers), [Flutter iOS 배포](https://docs.flutter.dev/deployment/ios).
+
