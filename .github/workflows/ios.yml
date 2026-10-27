@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - campus-radar-source.zip
+      - .github/workflows/ios.yml
 permissions:
   contents: write
 concurrency:
@@ -16,7 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Extract source
-        run: unzip -q campus-radar-source.zip -d app
+        run: |
+          unzip -q campus-radar-source.zip -d app
+          python3 -c "from pathlib import Path; [p.write_bytes(p.read_bytes().replace(bytes([13,10]),bytes([10]))) for p in Path('app/scripts').glob('*.sh')]"
       - name: Install Flutter 3.35.7
         run: |
           git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
