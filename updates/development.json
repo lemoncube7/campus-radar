@@ -1,8 +1,8 @@
 {
   "versionName": "0.5.2",
-  "versionCode": 38,
+  "versionCode": 39,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.2-dev/campus-radar.apk",
-  "sha256": "fd8ae8cf43081b0b8f638907e6b0bda66c67b329bc5dbfba087e335853816d5d",
-  "notes": "과제 상세 응답 예외로 전체 수집이 중단되는 문제 보완, 제출 대기 카테고리·개수 표시, 출석 미반영 콘텐츠 일괄 숨김, 잠금화면 음량 창 숨김 오작동 보완. 개발 버전입니다."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.2-dev.2/campus-radar.apk",
+  "sha256": "6fc057980e03eb49ffa02191a140cca454726c10607532b1ee066b5597047f09",
+  "notes": "빌드 38 테스트본도 업데이트할 수 있도록 빌드 39로 배포합니다. 과제 상세 응답 예외 대응, 제출 대기·카테고리 개수, 출석 미반영 콘텐츠 숨김, 잠금화면 음량 창 숨김 판단을 보완했습니다."
 }
