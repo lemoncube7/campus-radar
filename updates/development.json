@@ -1,8 +1,8 @@
 {
-  "versionName": "0.5.1",
-  "versionCode": 37,
+  "versionName": "0.5.2",
+  "versionCode": 38,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.1-dev/campus-radar.apk",
-  "sha256": "d0ec598e2bca15b16dbaf88187ea2f913eeb634a2d79d7ae1c7c6bd1b154538e",
-  "notes": "잠금화면 바깥 터치 숨김·미리보기 개선, 시작 후 음수 카운트다운 설정, 기한 지난 항목 정리, 콘텐츠 출석 반영 표시, 날짜별 휴강 반영, 하단 동작 알림 종료 개선. 개발 버전입니다."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.2-dev/campus-radar.apk",
+  "sha256": "fd8ae8cf43081b0b8f638907e6b0bda66c67b329bc5dbfba087e335853816d5d",
+  "notes": "과제 상세 응답 예외로 전체 수집이 중단되는 문제 보완, 제출 대기 카테고리·개수 표시, 출석 미반영 콘텐츠 일괄 숨김, 잠금화면 음량 창 숨김 오작동 보완. 개발 버전입니다."
 }
