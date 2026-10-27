@@ -42,12 +42,12 @@
 
 ## 설치하기
 
-아래는 **2026년 10월 22일 기준** 배포 상태입니다. 운영체제별 버전과 기능 범위는 다를 수 있습니다.
+아래는 **2026년 10월 27일 기준** 배포 상태입니다. 운영체제별 버전과 기능 범위는 다를 수 있습니다.
 
 | 플랫폼 | 배포 | 다운로드·안내 |
 |---|---|---|
 | Android 정식 | **0.4.14** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.4.14/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.4.14) |
-| Android 개발 | **0.5.0** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.0-dev/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.0-dev) |
+| Android 개발 | **0.5.1** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.1-dev/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.1-dev) |
 | Windows x64 미리보기 | **0.5.0** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.5.0/campus-radar-windows.zip) |
 | iPhone | 별도 테스트 배포 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
@@ -156,6 +156,13 @@ AI가 만든 일정이나 시간표를 참고한 추정은 틀릴 수 있습니�
 - Android·iPhone·Windows의 계정과 데이터는 각각 독립적이며, 기기 간 동기화는 제공하지 않습니다.
 - AI를 사용하면 해당 기능에 필요한 공지 본문·과목명·과제 정보·저장된 시간표 등이 Google Gemini로 전송됩니다. 관련 자료를 추가한 재분석과 채팅은 선택한 공유 범위에 따라 전송 내용이 달라집니다. AI 채팅의 질문과 최근 대화도 Google로 전송됩니다.
 - 앱 설치와 업데이트 확인은 GitHub를 사용합니다. 외부 캘린더나 브라우저는 사용자가 선택한 기능에서 연결됩니다.
+
+### 할 일 정리와 휴강 반영
+
+- `설정 → 할 일 정리·출석`에서 기한 지난 항목의 확인 후 숨김·즉시 자동 숨김·24시간 후 자동 숨김을 선택합니다. 숨긴 항목은 일정의 숨김 목록에서 복구할 수 있습니다.
+- 콘텐츠는 완료 여부와 출석 반영 여부를 따로 표시합니다. 출석 미반영 콘텐츠의 마감 알림도 별도로 선택할 수 있습니다.
+- 공지의 AI 휴강 후보에서 **시간표에 휴강 반영**을 누르고 날짜와 수업을 확인합니다. 주간 시간표 원본은 유지하고 해당 날짜의 수업과 알림만 제외합니다. `시간표 → 날짜별 휴강 관리`에서 해제할 수 있습니다.
+- 잠금화면 미리보기를 보면서 카드 크기·위치·불투명도를 조절할 수 있습니다. 수업 카운트다운은 시작 후 0~120분 유지하도록 설정할 수 있습니다.
 
 ## 업데이트
 
