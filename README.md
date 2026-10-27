@@ -47,7 +47,7 @@
 | 플랫폼 | 배포 | 다운로드·안내 |
 |---|---|---|
 | Android 정식 | **0.4.14** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.4.14/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.4.14) |
-| Android 개발 | **0.5.2** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.2-dev/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.2-dev) |
+| Android 개발 | **0.5.2** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.2-dev.2/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.2-dev.2) |
 | Windows x64 미리보기 | **0.5.0** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.5.0/campus-radar-windows.zip) |
 | iPhone 개발 | **0.5.2** · 실기기 검증 전 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
@@ -191,7 +191,7 @@ AI가 만든 일정이나 시간표를 참고한 추정은 틀릴 수 있습니�
 
 현재 저장소는 배포 파일·버전 정보·워크플로와 **소스 ZIP**을 중심으로 관리합니다. 저장소 루트에서 바로 Flutter 명령을 실행하는 구조는 아닙니다.
 
-- Android: 해당 [릴리스](https://github.com/lemoncube7/campus-radar/releases)의 소스 ZIP (0.5.2는 `campus-radar-source.zip`)
+- Android: 해당 [릴리스](https://github.com/lemoncube7/campus-radar/releases)의 `campus-radar-android-source.zip`
 - Windows: 저장소의 [campus-radar-windows-source.zip](campus-radar-windows-source.zip)
 - iPhone: [배포·빌드 안내](IOS-DISTRIBUTION.md)
 
