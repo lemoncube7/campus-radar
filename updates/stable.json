@@ -1,8 +1,8 @@
 {
-  "versionName": "0.4.14",
-  "versionCode": 35,
+  "versionName": "0.5.4",
+  "versionCode": 46,
   "channel": "stable",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.4.14/campus-radar.apk",
-  "sha256": "03122b4f932c03629b77b9f011859f3a21e1a247dd351a261ae5676750cb80e0",
-  "notes": "Gemini 재검토 기반 AI 일정 자동 승인(설정에서 켜기), 자동 승인·검토 이유 표시, 캘린더 연동, 잠금화면 수업 카운트다운 및 내부 구조 개선."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.4/campus-radar.apk",
+  "sha256": "8e1e4677380e27aedaf266821bb22f22d0132ae0fdf0468cb4cb2c790a2716e0",
+  "notes": "화면·AI 기능 안내·업데이트 내역 개편, 기존 세션 재사용과 기본 2시간 재연결 대기, 개발 기능 정식 통합. 업데이트 내역에서 건너뛴 버전의 변경도 볼 수 있습니다."
 }
