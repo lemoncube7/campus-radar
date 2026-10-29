@@ -46,12 +46,12 @@
 
 | 플랫폼 | 배포 | 다운로드·안내 |
 |---|---|---|
-| Android 정식 | **0.5.4 (46)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.4/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.4) |
+| Android 정식 | **0.5.5 (53)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.5/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.5) |
 | Android 개발 이력 | **0.5.3 (40)** — 현재 정식에 통합 | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.3-dev/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.3-dev) |
 | Windows x64 미리보기 | **0.5.0** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.5.0/campus-radar-windows.zip) |
-| iPhone | 별도 테스트 배포 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
+| iPhone | **0.5.5 (53)** · 실제 기기 검증 진행 대상 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
-**정식 버전**은 일반 사용을 위한 배포이고, **개발 버전**에는 먼저 확인할 새 기능과 화면 변경이 들어갑니다. 개발 버전은 사용 중 문제가 생길 수 있습니다. 아래 주요 화면은 **Android 0.5.4 기준**이며, Windows·iPhone과 이전 버전은 메뉴 배치가 다를 수 있습니다.
+**정식 버전**은 일반 사용을 위한 배포이고, **개발 버전**에는 먼저 확인할 새 기능과 화면 변경이 들어갑니다. 개발 버전은 사용 중 문제가 생길 수 있습니다. 아래 주요 화면은 **Android 0.5.5 기준**이며, Windows·iPhone과 이전 버전은 메뉴 배치가 다를 수 있습니다.
 
 iPhone은 Android와 별도로 업데이트합니다. 이 README의 Android 위젯·잠금화면 기능이나 최신 화면 구성이 iPhone에도 모두 적용되어 있다는 의미는 아닙니다.
 
@@ -226,5 +226,4 @@ flutter build windows --release
 ```
 
 계정·API 키·배포 서명 파일은 소스에 포함하지 않습니다. 본인 환경에서 별도로 준비해야 합니다. 현재 기능 범위와 버전별 변경은 [릴리스 목록](https://github.com/lemoncube7/campus-radar/releases)을 참고하세요.
-
 
