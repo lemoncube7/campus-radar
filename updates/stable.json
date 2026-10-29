@@ -1,8 +1,8 @@
 {
-  "versionName": "0.5.4",
-  "versionCode": 46,
   "channel": "stable",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.4/campus-radar.apk",
-  "sha256": "8e1e4677380e27aedaf266821bb22f22d0132ae0fdf0468cb4cb2c790a2716e0",
-  "notes": "화면·AI 기능 안내·업데이트 내역 개편, 기존 세션 재사용과 기본 2시간 재연결 대기, 개발 기능 정식 통합. 업데이트 내역에서 건너뛴 버전의 변경도 볼 수 있습니다."
+  "notes": "두 색상 테마, 설정·시간표·AI 채팅 개선, 오늘 요약 회색 상자 수정.",
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.5/campus-radar.apk",
+  "versionName": "0.5.5",
+  "versionCode": 53,
+  "sha256": "7b83bbd14ae84c4c1042a093d77f72f6be2aba628348b6d2dfdbaeb7bf4705e2"
 }

@@ -1,8 +1,8 @@
 {
-  "versionName": "0.5.3",
-  "versionCode": 40,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.3-dev/campus-radar.apk",
-  "sha256": "a4ae55d2e9f06e055131131813600cabea3da5bbf913e63804821b73f8d40d1c",
-  "notes": "8가지 테마 색상, 제출 시작 전 과제 표시 설정, 미사용 기능 추천, 잠금화면 카드 숨김 조건과 표시 순서 설정을 추가했습니다. Android 전용 개발 업데이트입니다."
+  "notes": "두 색상 테마, 설정·시간표·AI 채팅 개선, 오늘 요약 회색 상자 수정.",
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.5/campus-radar.apk",
+  "versionName": "0.5.5",
+  "versionCode": 53,
+  "sha256": "7b83bbd14ae84c4c1042a093d77f72f6be2aba628348b6d2dfdbaeb7bf4705e2"
 }
