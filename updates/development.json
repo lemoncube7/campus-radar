@@ -1,8 +1,8 @@
 {
+  "versionName": "0.5.6-dev.1",
+  "versionCode": 54,
   "channel": "development",
-  "notes": "두 색상 테마, 설정·시간표·AI 채팅 개선, 오늘 요약 회색 상자 수정.",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.5/campus-radar.apk",
-  "versionName": "0.5.5",
-  "versionCode": 53,
-  "sha256": "7b83bbd14ae84c4c1042a093d77f72f6be2aba628348b6d2dfdbaeb7bf4705e2"
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.6-dev.1/campus-radar.apk",
+  "sha256": "71325cec3f24eeb8d01921cbc1cb75f2870944377c7c3258fd6466fd33538054",
+  "notes": "앱 직접 접속 시 대기 없이 새 로그인·수집, 태블릿 배치, 요약 상세 진입, 저장소 진단, 휴강 날짜 검증 수정. 실기기 검증 전 개발 버전입니다."
 }
