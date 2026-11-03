@@ -4,5 +4,5 @@
   "channel": "development",
   "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.10-dev.9/campus-radar-0.5.10-dev.9.apk",
   "sha256": "5988ee0682f1894e7a04c70e150bbe86b11fced8c31cf1ef9bfaad9f45809cb4",
-  "notes": "자료·첨부 탐색, 시간표 문자열 공유, 평가 결과·시험 서식, 잠금화면 위젯 개선과 홈 시간표 강의실 복원. 공유 읽기 복구·개발 버전 표시 보완. 일부 장시간/다른 기기/GPT 외부 연계 검증은 남아 있는 개발 버전입니다."
+  "notes": "자료·첨부 탐색, 시간표 문자열 공유, GPT 연결·학교 자료 활용 및 무서버 내보내기 경로, 평가 결과·시험 서식, 위젯·강의실 표시 보완. GPT는 별도 연결이 필요하며 새 Drive 무서버 전체 흐름은 미검증인 개발 버전입니다."
 }
