@@ -1,8 +1,8 @@
 {
-  "versionName": "0.5.11-dev.1",
-  "versionCode": 72,
+  "versionName": "0.5.11-dev.2",
+  "versionCode": 73,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.11-dev.1/campus-radar-0.5.11-dev.1.apk",
-  "sha256": "b8d2a58651a5434e3935c94c42dc3b810f34bc40f94afa96417906ff6f88ff3e",
-  "notes": "Drive 다중 계정 자동 내보내기 구현(실계정 검증 전·Google 테스트 계정만 연결 가능), ChatGPT·Claude 공통 연결 안내, LockStar 표준 카드·안전 여백·크기 대응, 정식 빌드 개발 업데이트 경로 제한, 첨부 텍스트 중복 추출 보완과 내부 안정화. 첨부 체크리스트를 확인해 주세요."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.11-dev.2/campus-radar-0.5.11-dev.2.apk",
+  "sha256": "41fab40dd9499a2c5886430012dd6c30d191ba0948eea95a2598a88918153a7c",
+  "notes": "Drive 지금 전송 실패 이유 화면 표시·재시도 대기 건너뛰기, 활동 로그에 실패 원인(Google 연결 단계, Drive HTTP 코드·건너뛴 이유) 기록, LockStar 카드 좌우 여백 확대. 실기기 Drive 전송은 아직 미검증이에요."
 }
