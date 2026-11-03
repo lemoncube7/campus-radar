@@ -1,8 +1,8 @@
 {
-  "versionName": "0.5.6-dev.1",
-  "versionCode": 54,
+  "versionName": "0.5.10-dev.9",
+  "versionCode": 71,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.6-dev.1/campus-radar.apk",
-  "sha256": "71325cec3f24eeb8d01921cbc1cb75f2870944377c7c3258fd6466fd33538054",
-  "notes": "앱 직접 접속 시 대기 없이 새 로그인·수집, 태블릿 배치, 요약 상세 진입, 저장소 진단, 휴강 날짜 검증 수정. 실기기 검증 전 개발 버전입니다."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.10-dev.9/campus-radar-0.5.10-dev.9.apk",
+  "sha256": "5988ee0682f1894e7a04c70e150bbe86b11fced8c31cf1ef9bfaad9f45809cb4",
+  "notes": "자료·첨부 탐색, 시간표 문자열 공유, 평가 결과·시험 서식, 잠금화면 위젯 개선과 홈 시간표 강의실 복원. 공유 읽기 복구·개발 버전 표시 보완. 일부 장시간/다른 기기/GPT 외부 연계 검증은 남아 있는 개발 버전입니다."
 }
