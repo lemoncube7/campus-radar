@@ -36,7 +36,7 @@ jobs:
           ruby scripts/configure-ios-widgets.rb
           set -o pipefail
           flutter build ios --simulator --debug \
-            --dart-define=APP_VERSION=0.5.6 --dart-define=APP_BUILD=84 2>&1 | tee ../build.log
+            --dart-define=APP_VERSION=0.5.6 --dart-define=APP_BUILD=84 --dart-define=DEMO=true 2>&1 | tee ../build.log
       - name: Boot simulator, install, launch
         working-directory: app
         run: |
@@ -48,11 +48,18 @@ jobs:
           BUNDLE=$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' build/ios/iphonesimulator/Runner.app/Info.plist)
           echo "BUNDLE=$BUNDLE" >> "$GITHUB_ENV"
           mkdir -p ../shots
-          xcrun simctl launch --console-pty "$DEVICE" "$BUNDLE" > ../shots/app-console.log 2>&1 &
-          sleep 25
-          xcrun simctl io "$DEVICE" screenshot ../shots/01-launch.png
-          sleep 15
-          xcrun simctl io "$DEVICE" screenshot ../shots/02-after-40s.png
+          # Demo build: synthetic semester, no school login. One launch per tab.
+          for TAB in 0 1 2 4; do
+            xcrun simctl terminate "$DEVICE" "$BUNDLE" 2>/dev/null || true
+            SIMCTL_CHILD_DEMO_TAB=$TAB xcrun simctl launch "$DEVICE" "$BUNDLE" >> ../shots/app-console.log 2>&1
+            sleep $([ "$TAB" = 0 ] && echo 30 || echo 12)
+            xcrun simctl io "$DEVICE" screenshot "../shots/tab-$TAB.png"
+          done
+          xcrun simctl ui "$DEVICE" appearance dark
+          xcrun simctl terminate "$DEVICE" "$BUNDLE" || true
+          SIMCTL_CHILD_DEMO_TAB=0 xcrun simctl launch "$DEVICE" "$BUNDLE" >> ../shots/app-console.log 2>&1
+          sleep 12
+          xcrun simctl io "$DEVICE" screenshot ../shots/tab-0-dark.png
       - name: Collect logs
         if: always()
         run: |
