@@ -1,0 +1,64 @@
+name: iOS simulator check
+# Development check for iPhone parity work: builds ios-dev-source.zip for the
+# iOS Simulator, launches the app, and keeps screenshots and the app log as
+# artifacts. It never touches the ios-preview release.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ios-dev-source.zip
+      - .github/workflows/ios-sim.yml
+concurrency:
+  group: ios-sim
+  cancel-in-progress: true
+jobs:
+  simulator:
+    runs-on: macos-14
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract source
+        run: unzip -q ios-dev-source.zip -d app
+      - name: Install Flutter 3.35.7
+        run: |
+          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+      - name: Analyze and test
+        working-directory: app
+        run: |
+          flutter pub get
+          flutter analyze lib
+          flutter test
+      - name: Build for simulator
+        working-directory: app
+        run: |
+          flutter build ios --simulator --debug \
+            --dart-define=APP_VERSION=0.5.6 --dart-define=APP_BUILD=84 2>&1 | tee ../build.log
+      - name: Boot simulator, install, launch
+        working-directory: app
+        run: |
+          DEVICE=$(xcrun simctl list devices available -j | python3 -c "import json,sys;d=json.load(sys.stdin)['devices'];print(next(x['udid'] for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone 15')))")
+          echo "DEVICE=$DEVICE" >> "$GITHUB_ENV"
+          xcrun simctl boot "$DEVICE"
+          xcrun simctl bootstatus "$DEVICE" -b
+          xcrun simctl install "$DEVICE" build/ios/iphonesimulator/Runner.app
+          BUNDLE=$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' build/ios/iphonesimulator/Runner.app/Info.plist)
+          echo "BUNDLE=$BUNDLE" >> "$GITHUB_ENV"
+          mkdir -p ../shots
+          xcrun simctl launch --console-pty "$DEVICE" "$BUNDLE" > ../shots/app-console.log 2>&1 &
+          sleep 25
+          xcrun simctl io "$DEVICE" screenshot ../shots/01-launch.png
+          sleep 15
+          xcrun simctl io "$DEVICE" screenshot ../shots/02-after-40s.png
+      - name: Collect logs
+        if: always()
+        run: |
+          mkdir -p shots
+          cp build.log shots/ 2>/dev/null || true
+          xcrun simctl spawn "$DEVICE" log show --last 3m --style compact --predicate 'process == "Runner"' > shots/system.log 2>/dev/null || true
+          xcrun simctl spawn "$DEVICE" launchctl list 2>/dev/null | grep -i runner > shots/running.txt || echo "not running" > shots/running.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ios-sim-${{ github.run_number }}
+          path: shots/
