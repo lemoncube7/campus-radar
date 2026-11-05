@@ -51,13 +51,16 @@ jobs:
           # Demo build: synthetic semester, no school login. One launch per tab.
           for TAB in 0 1 2 4; do
             xcrun simctl terminate "$DEVICE" "$BUNDLE" 2>/dev/null || true
-            SIMCTL_CHILD_DEMO_TAB=$TAB xcrun simctl launch "$DEVICE" "$BUNDLE" >> ../shots/app-console.log 2>&1
+            DATA=$(xcrun simctl get_app_container "$DEVICE" "$BUNDLE" data)
+            mkdir -p "$DATA/Documents" && echo "$TAB" > "$DATA/Documents/demo_tab"
+            xcrun simctl launch "$DEVICE" "$BUNDLE" >> ../shots/app-console.log 2>&1
             sleep $([ "$TAB" = 0 ] && echo 30 || echo 12)
             xcrun simctl io "$DEVICE" screenshot "../shots/tab-$TAB.png"
           done
           xcrun simctl ui "$DEVICE" appearance dark
           xcrun simctl terminate "$DEVICE" "$BUNDLE" || true
-          SIMCTL_CHILD_DEMO_TAB=0 xcrun simctl launch "$DEVICE" "$BUNDLE" >> ../shots/app-console.log 2>&1
+          echo 0 > "$(xcrun simctl get_app_container "$DEVICE" "$BUNDLE" data)/Documents/demo_tab"
+          xcrun simctl launch "$DEVICE" "$BUNDLE" >> ../shots/app-console.log 2>&1
           sleep 12
           xcrun simctl io "$DEVICE" screenshot ../shots/tab-0-dark.png
       - name: Collect logs
