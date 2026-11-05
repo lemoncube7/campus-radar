@@ -1,0 +1,50 @@
+name: Windows Drive viewer build (dev)
+# Build-only check for the claude/windows-drive branch. Uploads the packaged
+# app as a run artifact; never creates or changes a release.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - windows-dev-source.zip
+permissions:
+  contents: read
+concurrency:
+  group: windows-viewer-dev
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract source
+        run: Expand-Archive -LiteralPath windows-dev-source.zip -DestinationPath app
+      - uses: NuGet/setup-nuget@v2
+      - name: Install Flutter 3.35.7
+        run: |
+          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$env:RUNNER_TEMP/flutter"
+          "$env:RUNNER_TEMP/flutter/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: Analyze and test
+        working-directory: app
+        run: |
+          flutter pub get
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          flutter analyze --no-pub lib
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          flutter test --no-pub test/app_snapshot_test.dart test/architecture_boundaries_test.dart test/drive_sync_test.dart
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Build and package
+        working-directory: app
+        env:
+          CID: ${{ secrets.GOOGLE_DESKTOP_CLIENT_ID }}
+          CSEC: ${{ secrets.GOOGLE_DESKTOP_CLIENT_SECRET }}
+        run: |
+          flutter build windows --release --no-pub "--dart-define=GOOGLE_DESKTOP_CLIENT_ID=$env:CID" "--dart-define=GOOGLE_DESKTOP_CLIENT_SECRET=$env:CSEC"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/build-windows-package.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: campus-radar-windows-viewer
+          path: app/build/windows/dist/campus-radar-windows.zip
+          retention-days: 7
