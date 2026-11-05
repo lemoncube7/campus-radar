@@ -32,6 +32,9 @@ jobs:
       - name: Build for simulator
         working-directory: app
         run: |
+          # Same project setup as scripts/build-ios.sh (adds RadarShared and the widget target).
+          ruby scripts/configure-ios-widgets.rb
+          set -o pipefail
           flutter build ios --simulator --debug \
             --dart-define=APP_VERSION=0.5.6 --dart-define=APP_BUILD=84 2>&1 | tee ../build.log
       - name: Boot simulator, install, launch
