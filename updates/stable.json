@@ -1,8 +1,8 @@
 {
   "channel": "stable",
-  "notes": "수집 속도 개선, 오늘·과목·할 일 화면 개편, Google Drive 자동 내보내기, 업데이트 직후 위젯 응답 중단 수정.",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.0/campus-radar.apk",
-  "versionName": "0.6.0",
-  "versionCode": 83,
-  "sha256": "c9c4f4f510c27914acaa2f04ba834fa052c1f2eb2d3da2837a924c8101187d59"
+  "notes": "시작 설정 마법사·체험 모드·휴강 알림 추가, 추가 제출 마감 표시, Drive 원본 자료 ZIP과 PC용 앱 데이터 전송, 위젯 응답 중단 감소.",
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.1/campus-radar.apk",
+  "versionName": "0.6.1",
+  "versionCode": 84,
+  "sha256": "8b0ddca82cad0d5027284b1d49a825d485fc60139054fbcaac6658ed0fededac"
 }
