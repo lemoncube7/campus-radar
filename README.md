@@ -48,7 +48,7 @@
 |---|---|---|
 | Android 정식 | **0.6.2 (85)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.6.2/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.6.2) |
 | Android 개발 | **0.5.11-dev.11 (82)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.11-dev.11/campus-radar-0.5.11-dev.11.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.11-dev.11) |
-| Windows x64 미리보기 | **0.5.0** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.5.0/campus-radar-windows.zip) |
+| Windows x64 미리보기 | **0.6.2** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.6.2/campus-radar-windows.zip) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/windows-v0.6.2) |
 | iPhone | **0.5.5 (53)** · 실제 기기 검증 진행 대상 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
 **정식 버전**은 일반 사용을 위한 배포이고, **개발 버전**에는 먼저 확인할 새 기능과 화면 변경이 들어갑니다. 개발 버전은 사용 중 문제가 생길 수 있습니다. 아래 주요 화면은 **Android 0.6.0 기준**이며, Windows·iPhone과 이전 버전은 메뉴 배치가 다를 수 있습니다.

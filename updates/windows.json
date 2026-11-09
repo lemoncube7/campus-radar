@@ -1,10 +1,9 @@
 {
-  "versionName": "0.5.0",
-  "versionCode": 36,
+  "versionName": "0.6.2",
+  "versionCode": 85,
   "platform": "windows",
   "architecture": "x64",
-  "zipUrl": "https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.5.0/campus-radar-windows.zip",
-  "sha256": "74c196a11605c7113b94a35aeb4982621902fea82b629af96768b650426cb9e4",
-  "bytes": 16373095
+  "zipUrl": "https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.6.2/campus-radar-windows.zip",
+  "sha256": "8c734fd767b5304e59943db436dc29fb3c3ae28c3ced96826c85028f930013cc",
+  "bytes": 17256591
 }
-
