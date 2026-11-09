@@ -20,9 +20,9 @@ jobs:
         run: |
           unzip -q campus-radar-source.zip -d app
           python3 -c "from pathlib import Path; [p.write_bytes(p.read_bytes().replace(bytes([13,10]),bytes([10]))) for p in Path('app/scripts').glob('*.sh')]"
-      - name: Install Flutter 3.35.7
+      - name: Install Flutter 3.47.9
         run: |
-          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          git clone --depth 1 --branch 3.47.9 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
           echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
       - name: Build unsigned IPA
         working-directory: app

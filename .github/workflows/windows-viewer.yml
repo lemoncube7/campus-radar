@@ -20,9 +20,9 @@ jobs:
       - name: Extract source
         run: Expand-Archive -LiteralPath windows-dev-source.zip -DestinationPath app
       - uses: NuGet/setup-nuget@v2
-      - name: Install Flutter 3.35.7
+      - name: Install Flutter 3.47.9
         run: |
-          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$env:RUNNER_TEMP/flutter"
+          git clone --depth 1 --branch 3.47.9 https://github.com/flutter/flutter.git "$env:RUNNER_TEMP/flutter"
           "$env:RUNNER_TEMP/flutter/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       - name: Analyze and test
         working-directory: app

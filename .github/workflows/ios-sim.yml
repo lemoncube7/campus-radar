@@ -19,9 +19,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Extract source
         run: unzip -q ios-dev-source.zip -d app
-      - name: Install Flutter 3.35.7
+      - name: Install Flutter 3.47.9
         run: |
-          git clone --depth 1 --branch 3.35.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          git clone --depth 1 --branch 3.47.9 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
           echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
       - name: Analyze and test
         working-directory: app
