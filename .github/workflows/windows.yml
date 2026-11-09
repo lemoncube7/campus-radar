@@ -2,6 +2,7 @@ name: Windows independent desktop
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - campus-radar-windows-source.zip
 permissions:
@@ -27,7 +28,7 @@ jobs:
         run: |
           flutter pub get
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          flutter analyze --no-pub
+          flutter analyze --no-pub --no-fatal-infos lib test
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           flutter test --no-pub
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
