@@ -1,0 +1,18 @@
+{
+    "schemaVersion":  1,
+    "notices":  [
+                    {
+                        "id":  "2026-11-10-notice-system-test",
+                        "title":  "공지 기능 시험",
+                        "body":  "개발자 시험용 공지예요. 시험 빌드(89)에서만 보이고 24시간 뒤 사라져요.",
+                        "publishedAt":  "2026-11-10T10:21:49Z",
+                        "level":  "important",
+                        "minVersionCode":  89,
+                        "maxVersionCode":  89,
+                        "platforms":  [
+                                          "android"
+                                      ],
+                        "expiresAt":  "2026-11-11T10:21:49Z"
+                    }
+                ]
+}
