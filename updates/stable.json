@@ -1,8 +1,8 @@
 {
   "channel": "stable",
-  "notes": "0.6.3 Drive 과목 폴더 중복 생성 긴급 수정, 마감 시간·BMP 첨부·잠금화면 스크롤 수정",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.4/campus-radar.apk",
-  "versionName": "0.6.4",
-  "versionCode": 87,
-  "sha256": "fcf151d094c52c1066251244bb895a10a30f2d5c4baabc0eb563ad7299490a5d"
+  "notes": "AI 일정·휴강 자동 반영, 시간표 휴강 표시, Drive 중복 정리, 학기 전환 보호, 알림·LockStar 개선",
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.5/campus-radar.apk",
+  "versionName": "0.6.5",
+  "versionCode": 88,
+  "sha256": "ae5fda425d32de16b27a33e9535bc714d8f40a3c8028609e8ac5e06c3bb32b6a"
 }
