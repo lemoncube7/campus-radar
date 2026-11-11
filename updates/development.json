@@ -1,8 +1,8 @@
 {
-    "versionName":  "0.6.6-dev.1",
-    "versionCode":  90,
+    "versionName":  "0.6.6-dev.2",
+    "versionCode":  91,
     "channel":  "development",
-    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.6-dev.1/campus-radar-0.6.6-dev.1.apk",
-    "sha256":  "78f1cc25efaf923425feea2dd668816c862aaa4459567e0d7df4f84be8f0f88c",
-    "notes":  "자유게시판, 자유게시판 Drive 전송 옵션(기본 꺼짐), Drive 중복 업로드 방지 재설계와 기존 중복 1회 정리, 첨부원본.zip 폐지"
+    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.6-dev.2/campus-radar-0.6.6-dev.2.apk",
+    "sha256":  "fa04854c41fc341ebfdeb98f32ab71b732e8c38ccc15dbde2bf9830af4b27265",
+    "notes":  "자유게시판 첨부 자동 받기·Drive 전송(선택), 용량 한도 설정(기본 없음), Drive 안정성 수정"
 }
