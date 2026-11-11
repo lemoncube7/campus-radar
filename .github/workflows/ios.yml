@@ -1,6 +1,11 @@
 name: iOS AltStore preview
 on:
   workflow_dispatch:
+    inputs:
+      notes:
+        description: 'SideStore/AltStore 소스에 표시할 이번 버전 설명 (비우면 버전 번호로 자동 작성)'
+        required: false
+        default: ''
   push:
     paths:
       - campus-radar-source.zip
@@ -12,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-26
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
@@ -27,8 +32,10 @@ jobs:
       - name: Build unsigned IPA
         working-directory: app
         run: bash scripts/build-ios.sh
-      - name: Create AltStore metadata
+      - name: Create SideStore/AltStore metadata
         working-directory: app
+        env:
+          IOS_RELEASE_NOTES: ${{ github.event.inputs.notes }}
         run: |
           python3 scripts/make-altstore-source.py build/ios/altstore/campus-radar.ipa build/ios/altstore/altstore-source.json https://github.com/${{ github.repository }}/releases/download/ios-preview
           cp ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png build/ios/altstore/icon.png
@@ -54,4 +61,3 @@ jobs:
           gh release view ios-preview >/dev/null
           gh release upload ios-preview app/build/ios/altstore/campus-radar.ipa app/build/ios/altstore/campus-radar.ipa.sha256 app/build/ios/altstore/altstore-source.json app/build/ios/altstore/ios-latest.json app/build/ios/altstore/icon.png --clobber
           gh release edit ios-preview --draft=false --prerelease --latest=false
-

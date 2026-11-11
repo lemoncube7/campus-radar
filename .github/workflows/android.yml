@@ -1,0 +1,75 @@
+name: Android CI
+
+# The public repository holds the app source as campus-radar-android-source.zip,
+# not as a source tree (like windows.yml). Extract it first and work inside app/.
+# Debug build only: no signing secrets, no publishing.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - campus-radar-android-source.zip
+      - .github/workflows/android.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build & Test Android
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract Android source
+        run: unzip -q campus-radar-android-source.zip -d app
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+          cache-dependency-path: app/android/**/*.gradle*
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.pub-cache
+          key: ${{ runner.os }}-pub-${{ hashFiles('app/pubspec.lock') }}
+          restore-keys: ${{ runner.os }}-pub-
+
+      - name: Install Flutter 3.47.9
+        run: |
+          git clone --depth 1 --branch 3.47.9 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+
+      - name: Signing properties placeholder
+        # app/android/app/build.gradle.kts reads ../../../../work/signing.properties
+        # (= $GITHUB_WORKSPACE/../work). A debug build does not sign with it, but Gradle
+        # evaluates the release config, so give it a harmless placeholder.
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/../work"
+          cd "$GITHUB_WORKSPACE/../work"
+          touch campus-radar.jks
+          printf 'storeFile=campus-radar.jks\nstorePassword=dummy\nkeyAlias=dummy\nkeyPassword=dummy\n' > signing.properties
+
+      - name: Analyze and test
+        working-directory: app
+        run: |
+          flutter pub get
+          flutter analyze --no-pub --no-fatal-infos lib test
+          flutter test --no-pub
+
+      - name: Build debug APK
+        working-directory: app
+        run: flutter build apk --debug
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: campus-radar-debug-apk
+          path: app/build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error
