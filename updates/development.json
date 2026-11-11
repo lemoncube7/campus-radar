@@ -1,8 +1,8 @@
 {
-  "versionName": "0.5.11-dev.11",
-  "versionCode": 82,
-  "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.5.11-dev.11/campus-radar-0.5.11-dev.11.apk",
-  "sha256": "f369ecd0af314007506892bbaf03c9d65a0193ad2beae8d2f67ad16e4348b428",
-  "notes": "자동 수집 단축(앱 시작 약 67초 → 20초, 바뀌지 않은 자료 재사용), Drive 준비 재사용, 강제 종료 뒤 수집 대기 문제 수정, 학교 동시 요청 되돌림, AI 공지 준비 재시도."
+    "versionName":  "0.6.6-dev.1",
+    "versionCode":  90,
+    "channel":  "development",
+    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.6-dev.1/campus-radar-0.6.6-dev.1.apk",
+    "sha256":  "78f1cc25efaf923425feea2dd668816c862aaa4459567e0d7df4f84be8f0f88c",
+    "notes":  "자유게시판, 자유게시판 Drive 전송 옵션(기본 꺼짐), Drive 중복 업로드 방지 재설계와 기존 중복 1회 정리, 첨부원본.zip 폐지"
 }
