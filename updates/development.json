@@ -1,8 +1,8 @@
 {
-    "versionName":  "0.6.7-dev.1",
-    "versionCode":  93,
+    "versionName":  "0.6.7-dev.2",
+    "versionCode":  94,
     "channel":  "development",
-    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.7-dev.1/campus-radar-0.6.7-dev.1.apk",
-    "sha256":  "85ef9560f07bf5b604f99241f2ff140a6a4fb3f1ce4a5fa1cbaeb7fb9ce208a6",
-    "notes":  "하루 요약 첫 줄 브리핑(남은 수업·휴강·마감), Drive 같은 자료 재업로드 줄임, 자유게시판 연락처 가림, 체험 모드 예시 데이터 교체"
+    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.7-dev.2/campus-radar-0.6.7-dev.2.apk",
+    "sha256":  "5d1adf557622c6c3eebb93a3319e7e8b3e59bb37fa71c2310469b24f098d6dca",
+    "notes":  "하루 요약을 문장 중심으로 정리(숫자 줄 제거, 오늘 새 과제는 이름으로), Drive 같은 자료 재업로드 줄임, 자유게시판 연락처 가림"
 }
