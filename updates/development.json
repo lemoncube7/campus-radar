@@ -1,8 +1,8 @@
 {
-    "versionName":  "0.6.6",
-    "versionCode":  92,
+    "versionName":  "0.6.7-dev.1",
+    "versionCode":  93,
     "channel":  "development",
-    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.6/campus-radar.apk",
-    "sha256":  "5dc37cb913aeb3b19321e215b0f748841f8907679e4435bd469175fbdeba4405",
-    "notes":  "자유게시판(첨부·Drive 전송 선택), 용량 한도 설정, 감지 일정 삭제, Drive 중복 업로드 방지 재설계와 기존 중복 1회 정리"
+    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.7-dev.1/campus-radar-0.6.7-dev.1.apk",
+    "sha256":  "85ef9560f07bf5b604f99241f2ff140a6a4fb3f1ce4a5fa1cbaeb7fb9ce208a6",
+    "notes":  "하루 요약 첫 줄 브리핑(남은 수업·휴강·마감), Drive 같은 자료 재업로드 줄임, 자유게시판 연락처 가림, 체험 모드 예시 데이터 교체"
 }
