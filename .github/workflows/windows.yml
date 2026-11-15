@@ -30,6 +30,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           flutter analyze --no-pub --no-fatal-infos lib test
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          tzutil /s "Korea Standard Time"
+          Remove-Item test/capture_*_test.dart -ErrorAction SilentlyContinue  # need local font paths
           flutter test --no-pub
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Build and package
