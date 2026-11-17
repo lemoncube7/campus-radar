@@ -1,8 +1,8 @@
 {
-    "channel": "development",
-    "notes": "기능 가이드, 숨은 기능 꺼내기, AI 외부 전송 동의 분리·자동 반영 기본 꺼짐, 정식 버전에서 개발 채널 선택 가능, 화면 모양 통일",
-    "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.7/campus-radar.apk",
-    "versionName": "0.6.7",
-    "versionCode": 97,
-    "sha256": "4ecc08d295a87e5f1f93833d8b651ed9bc2d667d514e0750a33030acdb984d21"
+  "versionName": "0.6.8-dev.1",
+  "versionCode": 98,
+  "channel": "development",
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8-dev.1/campus-radar-0.6.8-dev.1.apk",
+  "sha256": "7876cd77fe08a2ea06f9f8ac849547a81f02094c8bd7558a138a0cf9a40059b6",
+  "notes": "8차 사용성 개선: 더보기 바로가기·기능 가이드 검색, AI 실패 원인 로그·재시도, 처리 기록 휴강 되돌리기, 체험 안내·캘린더 구분."
 }
