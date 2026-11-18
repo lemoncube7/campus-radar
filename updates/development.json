@@ -1,8 +1,8 @@
 {
-  "versionName": "0.6.8-dev.3",
-  "versionCode": 100,
+  "versionName": "0.6.8-dev.4",
+  "versionCode": 101,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8-dev.3/campus-radar-0.6.8-dev.3.apk",
-  "sha256": "ec87b958fb4ef09b35d9af3d76b7e7d92bec5385f6956230134b062443eca6ad",
-  "notes": "AI 공지 인식 개선: 온라인 대체·시청 기한, 상대 날짜·시각 범위·자정, 마감 연장·취소 분류, 요일 불일치 경고, 확정 무반응·분석 멈춤 수정."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8-dev.4/campus-radar-0.6.8-dev.4.apk",
+  "sha256": "33b972ff9e19538c68ebf6c75c91cde9263b0874044bf52c847ad7cc3534f34b",
+  "notes": "자유게시판 댓글 보기, Drive 자유게시판 파일에 댓글 포함."
 }
