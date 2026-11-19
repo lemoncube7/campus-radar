@@ -1,8 +1,8 @@
 {
-  "versionName": "0.6.8-dev.4",
-  "versionCode": 101,
+  "versionName": "0.6.8-dev.5",
+  "versionCode": 102,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8-dev.4/campus-radar-0.6.8-dev.4.apk",
-  "sha256": "33b972ff9e19538c68ebf6c75c91cde9263b0874044bf52c847ad7cc3534f34b",
-  "notes": "자유게시판 댓글 보기, Drive 자유게시판 파일에 댓글 포함."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8-dev.5/campus-radar-0.6.8-dev.5.apk",
+  "sha256": "55d4287beb0c36bf002b5b66e9b464b9da39510bc7312a48013d0731c57b3bd9",
+  "notes": "저장된 확인 결과가 없으면 업데이트 화면을 열 때 바로 확인해요. 같은 취소 공지를 다른 일정에 연결할 때 이전 연결을 먼저 되돌리도록 해 복구 기록을 보존해요."
 }
