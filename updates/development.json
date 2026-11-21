@@ -1,8 +1,8 @@
 {
-  "versionName": "0.6.9-dev.1",
-  "versionCode": 104,
+  "versionName": "0.6.9-dev.2",
+  "versionCode": 105,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.1/campus-radar-0.6.9-dev.1.apk",
-  "sha256": "b25fb023c69c907695809456a48bf768fc7b66304aaa156666c499fb1b845dc1",
-  "notes": "설정 > 앱 저장공간에서 용량과 구성을 보고 임시 파일만 비울 수 있어요. 개발자 옵션에 시연 모드(기본 꺼짐)를 추가했어요."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.2/campus-radar-0.6.9-dev.2.apk",
+  "sha256": "0865e2b034be368747aef8abfd428aa6e7f4d8d44d9ab8756f626f5b4e68c359",
+  "notes": "앱 저장공간에서 미디어 캐시를 과목별·큰 파일 순으로 보고, 기타·AI 항목을 알아보기 쉽게 나눠요. 설치가 끝난 업데이트 파일은 자동으로 지워요."
 }

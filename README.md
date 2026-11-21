@@ -50,7 +50,7 @@
 | 플랫폼 | 배포 | 다운로드·안내 |
 |---|---|---|
 | Android 정식 | **0.6.8 (103)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.6.8) |
-| Android 개발 | **0.6.9-dev.1 (104)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.1/campus-radar-0.6.9-dev.1.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.6.9-dev.1) |
+| Android 개발 | **0.6.9-dev.2 (105)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.2/campus-radar-0.6.9-dev.2.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.6.9-dev.2) |
 | Windows x64 미리보기 | **0.6.2** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.6.2/campus-radar-windows.zip) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/windows-v0.6.2) |
 | iPhone | **0.5.5 (53)** · 실제 기기 검증 진행 대상 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
