@@ -30,7 +30,7 @@
 
 ### 일정과 시간표까지
 
-- **주간 시간표**: 실제 강의계획서를 순서대로 읽어 수업 시간을 정리합니다. 추출 결과를 확인하고 표시할 수업을 선택할 수 있습니다.
+- **주간 시간표**: 실제 강의계획서를 읽어 수업 시간을 정리합니다. Android에서는 백그라운드에서 자동으로 만들고, 일부 과목을 못 읽어도 기존 시간표를 유지합니다. 추출 결과를 확인하고 표시할 수업을 선택할 수 있습니다.
 - **캘린더 연결**: Android에서는 선택한 기기 캘린더에 과제·콘텐츠 마감과 확정한 공지 일정을 전송합니다. Windows에서는 `.ics` 일정 파일을 저장합니다.
 - **과목 약자**: `컴퓨터프로그래밍2 → 컴프2`처럼 자주 쓰는 이름을 직접 지정합니다.
 - **Android 위젯·잠금화면**: 할 일·시간표 홈 화면 위젯과 선택형 잠금화면 카드를 제공합니다.
@@ -40,14 +40,17 @@
 
 개인 Gemini API 키를 연결하면 **공지의 일정 추출, 일정 후보 검토, 선택형 자동 승인, 하루 요약, 학업 정보에 관한 채팅**을 사용할 수 있습니다. 키 없이도 과제·공지 수집과 기본 알림, 시간표를 사용할 수 있습니다.
 
+- 공지 속 휴강·온라인 대체·영상 시청 기한·마감 연장·취소를 구분하고, 강의실 같은 장소도 일정과 캘린더에 넣습니다.
+- Android의 **공지 처리 과정** 화면에서 공지마다 수집 → 알림 → AI 분석 → 일정 → 캘린더 전송을 시간과 함께 보고, AI가 근거로 쓴 문장을 확인할 수 있습니다.
+
 ## 설치하기
 
-아래는 **2026년 11월 5일 기준** 배포 상태입니다. 운영체제별 버전과 기능 범위는 다를 수 있습니다.
+아래는 **2026년 11월 21일 기준** 배포 상태입니다. 운영체제별 버전과 기능 범위는 다를 수 있습니다.
 
 | 플랫폼 | 배포 | 다운로드·안내 |
 |---|---|---|
-| Android 정식 | **0.6.7 (97)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.6.7/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.6.7) |
-| Android 개발 | **0.5.11-dev.11 (82)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.5.11-dev.11/campus-radar-0.5.11-dev.11.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.5.11-dev.11) |
+| Android 정식 | **0.6.8 (103)** | [APK 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8/campus-radar.apk) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/v0.6.8) |
+| Android 개발 | 현재 정식 버전과 같음 | 새 개발 버전이 나오면 [릴리스 목록](https://github.com/lemoncube7/campus-radar/releases)에 올라옵니다 |
 | Windows x64 미리보기 | **0.6.2** | [ZIP 다운로드](https://github.com/lemoncube7/campus-radar/releases/download/windows-v0.6.2/campus-radar-windows.zip) · [변경 내용](https://github.com/lemoncube7/campus-radar/releases/tag/windows-v0.6.2) |
 | iPhone | **0.5.5 (53)** · 실제 기기 검증 진행 대상 | [iPhone 배포 안내](IOS-DISTRIBUTION.md) · [IPA·AltStore 소스](https://github.com/lemoncube7/campus-radar/releases/tag/ios-preview) |
 
@@ -190,7 +193,7 @@ PDF 텍스트 추출은 Android 15 이상, HWPX/PPTX/DOCX/UTF-8 텍스트는 로
 
 ## 계정과 자료는 어떻게 처리하나요?
 
-- **별도의 개발자 서버를 두지 않습니다.** 앱이 기기에서 학교 사이트에 직접 연결해 수집합니다.
+- **별도의 개발자 서버를 두지 않습니다.** 앱이 기기에서 학교 사이트에 직접 연결해 수집합니다. 단, Android 0.6.8부터 AI 분석이 실패하면 실패 종류·원인 코드·앱 버전·OS 버전만 개발자에게 보냅니다(공지 내용·계정 정보 제외). AI 설정에서 끌 수 있습니다.
 - 포털 ID·비밀번호와 Gemini API 키는 운영체제의 보안 저장소를 이용합니다. 포털 계정·세션 쿠키를 Gemini에 보내지 않습니다.
 - 수집한 과제·공지·시간표와 설정·로그는 기기에 저장합니다. **모든 수집 데이터가 별도로 암호화되는 것은 아닙니다.**
 - Android·iPhone·Windows의 계정과 데이터는 각각 독립적이며, 기기 간 동기화는 제공하지 않습니다.

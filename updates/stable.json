@@ -1,8 +1,8 @@
 {
     "channel": "stable",
-    "notes": "기능 가이드, 숨은 기능 꺼내기, AI 외부 전송 동의 분리·자동 반영 기본 꺼짐, 정식 버전에서 개발 채널 선택 가능, 화면 모양 통일",
-    "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.7/campus-radar.apk",
-    "versionName": "0.6.7",
-    "versionCode": 97,
-    "sha256": "4ecc08d295a87e5f1f93833d8b651ed9bc2d667d514e0750a33030acdb984d21"
+    "notes": "공지 속 일정 인식 개선(온라인 대체·시청 기한·장소), 공지 처리 과정 화면, 자동 승인 일정 캘린더 전송 수정, 자유게시판 댓글, 강의계획서로 시간표 자동 생성",
+    "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8/campus-radar.apk",
+    "versionName": "0.6.8",
+    "versionCode": 103,
+    "sha256": "aeaa16e0e51e4c23613d23aecd4ef8cd08f5c3b9938b3edf0c70290ef03cf4b5"
 }
