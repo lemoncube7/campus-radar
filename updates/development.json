@@ -1,8 +1,8 @@
 {
-  "versionName": "0.6.9-dev.2",
-  "versionCode": 105,
+  "versionName": "0.6.9-dev.3",
+  "versionCode": 106,
   "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.2/campus-radar-0.6.9-dev.2.apk",
-  "sha256": "0865e2b034be368747aef8abfd428aa6e7f4d8d44d9ab8756f626f5b4e68c359",
-  "notes": "앱 저장공간에서 미디어 캐시를 과목별·큰 파일 순으로 보고, 기타·AI 항목을 알아보기 쉽게 나눠요. 설치가 끝난 업데이트 파일은 자동으로 지워요."
+  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.3/campus-radar-0.6.9-dev.3.apk",
+  "sha256": "b8f0c497a1342dc81fc2eb76198052ab74df94bc40804697d158e13129b1784a",
+  "notes": "마감 24시간·3시간 이내 항목을 강조하고 24시간·3시간·1시간 전에 알려요. 기한 지난 콘텐츠가 사라지지 않고 마감 지남으로 남아요. 할 일·과목·더보기 화면을 설문 의견대로 정리했어요."
 }
