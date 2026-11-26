@@ -1,8 +1,8 @@
 {
-    "channel": "stable",
-    "notes": "공지 속 일정 인식 개선(온라인 대체·시청 기한·장소), 공지 처리 과정 화면, 자동 승인 일정 캘린더 전송 수정, 자유게시판 댓글, 강의계획서로 시간표 자동 생성",
-    "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.8/campus-radar.apk",
-    "versionName": "0.6.8",
-    "versionCode": 103,
-    "sha256": "aeaa16e0e51e4c23613d23aecd4ef8cd08f5c3b9938b3edf0c70290ef03cf4b5"
+    "channel":  "stable",
+    "notes":  "오늘 화면 상단에서 업데이트 확인. 새 버전이 감지되면 화면 위쪽에 버전과 채널이 표시되고, 누르면 업데이트 화면이 열려요.",
+    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9/campus-radar.apk",
+    "versionName":  "0.6.9",
+    "versionCode":  107,
+    "sha256":  "1c2270a65141bf619687d6ff73064a447e40c5ae78d6c0c4b33614a45717c08e"
 }
