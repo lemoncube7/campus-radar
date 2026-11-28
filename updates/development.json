@@ -1,8 +1,8 @@
 {
-  "versionName": "0.6.9-dev.3",
-  "versionCode": 106,
-  "channel": "development",
-  "apkUrl": "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.3/campus-radar-0.6.9-dev.3.apk",
-  "sha256": "b8f0c497a1342dc81fc2eb76198052ab74df94bc40804697d158e13129b1784a",
-  "notes": "마감 24시간·3시간 이내 항목을 강조하고 24시간·3시간·1시간 전에 알려요. 기한 지난 콘텐츠가 사라지지 않고 마감 지남으로 남아요. 할 일·과목·더보기 화면을 설문 의견대로 정리했어요."
+    "versionName":  "0.6.9-dev.4",
+    "versionCode":  108,
+    "channel":  "development",
+    "apkUrl":  "https://github.com/lemoncube7/campus-radar/releases/download/v0.6.9-dev.4/campus-radar-0.6.9-dev.4.apk",
+    "sha256":  "60ee6339bf3580963c5cd654a4c5f7b72cacf913c140ca139586e1f441fdd9c0",
+    "notes":  "세션 유지 시간 탐색 화면에서 가장 긴 재사용 기록과 현재 탐색 목표를 먼저 볼 수 있어요."
 }
